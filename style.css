@@ -7,14 +7,18 @@ html {
 	font-family: Montserrat;
 	box-sizing: border-box;
 }
+body {
+	background: #f7f7f7;
+}
 
 .top {
 	position: relative;
-	height: 100vh;
+	height: 120vh;
 	background: url('./images/hero.png');
 	background-size: cover;
 	color: white;
 	z-index: -1;
+	padding-bottom: 20vh;
 }
 .top::after {
 	position: absolute;
@@ -115,4 +119,65 @@ nav div {
 .hero-section .btns button:last-child {
 	background: transparent;
 	border: 1px solid white;
+}
+
+.benefits-1 {
+	height: 200px;
+	/* width: 100%; */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: 200px;
+	gap: 30px;
+	padding: 0 120px;
+}
+
+.benefit-1 {
+	transition: all 0.1s linear;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 100%;
+	background: white;
+	padding: 30px;
+}
+.benefit-1:hover {
+	background: #23a6f0;
+	color: #fff;
+}
+.benefit-1 i {
+	font-size: 55px;
+	color: #23a6f0;
+}
+.benefit-1:hover i {
+	color: #fff;
+}
+.benefit-1 p {
+	opacity: 0.6;
+	margin-top: 8px;
+	font-size: 15px;
+}
+
+.benefits-2 {
+	background: #fff;
+	padding: 70px 150px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 50px;
+}
+.benefit-2 {
+	text-align: center;
+	padding: 20px;
+}
+.benefit-2 * {
+	margin: 5px 0;
+}
+.benefit-2 i {
+	font-size: 65px;
+	color: #23a6f0;
+}
+
+.benefit-2 p {
+	opacity: 0.6;
+	margin-top: 8px;
+	font-size: 14px;
+	line-height: 20px;
 }
