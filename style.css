@@ -7,3 +7,112 @@ html {
 	font-family: Montserrat;
 	box-sizing: border-box;
 }
+
+.top {
+	position: relative;
+	height: 100vh;
+	background: url('./images/hero.png');
+	background-size: cover;
+	color: white;
+	z-index: -1;
+}
+.top::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background: rgba(0, 0, 0, 0.5);
+}
+.top > * {
+	position: relative;
+	z-index: 1;
+}
+
+button,
+.btn {
+	background: #23a6f0;
+	border: none;
+	color: white;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	/* cursor: pointer; */
+}
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+nav {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 120px;
+}
+
+nav .logo {
+	font-size: 18px;
+	/* font-weight: 600; */
+	letter-spacing: 0.3px;
+	margin-right: 100px;
+}
+
+nav div {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.nav-links > a,
+.login {
+	padding: 5px 8px;
+	font-size: 14px;
+}
+
+.member {
+	font-size: 14px;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.member > i {
+	margin-left: 10px;
+}
+
+.hero-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+}
+.hero-section h1 {
+	font-size: 45px;
+	line-height: 60px;
+}
+
+.hero-section p {
+	margin-top: 25px;
+	line-height: 25px;
+	font-size: 15px;
+}
+
+.hero-section .btns {
+	display: flex;
+	margin-top: 30px;
+}
+
+.hero-section .btns button {
+	border-radius: 30px;
+	padding: 15px 35px;
+	margin: 0 10px;
+}
+.hero-section .btns button:last-child {
+	background: transparent;
+	border: 1px solid white;
+}
