@@ -181,3 +181,48 @@ nav div {
 	font-size: 14px;
 	line-height: 20px;
 }
+
+.industry-section {
+	text-align: center;
+	padding: 100px 120px;
+}
+.industry-section h2 {
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+.industry-section .subtitle {
+	margin-bottom: 40px;
+	line-height: 25px;
+	color: grey;
+}
+.testimonials {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-columns: auto;
+	gap: 10px;
+}
+
+.testimonial {
+	background: white;
+	border: 2px solid rgb(230, 230, 230);
+	padding: 20px;
+	display: flex;
+	height: 350px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.testimonial > img {
+	width: 100px;
+}
+.testimonial p {
+	color: grey;
+	line-height: 23px;
+	font-size: 15px;
+}
+
+.testimonial div i {
+	font-size: 21px;
+	color: #ef9546;
+}
