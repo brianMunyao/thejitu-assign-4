@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
 
+/* :root{
+	--padding: 120px;
+} */
 *,
 html {
 	padding: 0;
@@ -16,9 +19,10 @@ body {
 	height: 120vh;
 	background: url('./images/hero.png');
 	background-size: cover;
+	background-position: center;
 	color: white;
-	z-index: -1;
 	padding-bottom: 20vh;
+	overflow: hidden;
 }
 .top::after {
 	position: absolute;
@@ -30,7 +34,7 @@ body {
 	background: rgba(0, 0, 0, 0.5);
 	pointer-events: none;
 }
-.top > * {
+.top * {
 	position: relative;
 	z-index: 1;
 }
@@ -62,13 +66,15 @@ nav {
 	height: 80px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 0 120px;
 }
-
-nav .logo {
+.logo {
 	font-size: 18px;
-	/* font-weight: 600; */
+	font-weight: 600;
 	letter-spacing: 0.3px;
+}
+nav .logo {
 	margin-right: 100px;
 }
 
@@ -83,15 +89,46 @@ nav div {
 	font-size: 14px;
 }
 
+nav .member {
+	margin-left: 10px;
+}
 .member {
 	font-size: 14px;
-	margin-left: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 .member > ion-icon {
 	margin-left: 10px;
+}
+
+.mobile-nav {
+	transition: all 0.2px linear;
+	z-index: 2;
+	position: absolute;
+	right: 10px;
+	background: #fff;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	transform: translateX(110%);
+}
+.mobile-nav.nav-opened {
+	transform: translateX(0);
+}
+.mobile-nav .nav-links {
+	display: flex;
+	flex-direction: column;
+}
+.mobile-nav * {
+	margin: 5px 0;
+}
+
+.burger {
+	display: none;
+	font-size: 35px;
+	cursor: pointer;
 }
 
 .hero-section {
@@ -129,10 +166,10 @@ nav div {
 }
 
 .benefits-1 {
-	height: 200px;
+	height: auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-auto-rows: 200px;
+	grid-auto-rows: 210px;
 	gap: 30px;
 	padding: 0 120px;
 }
@@ -160,7 +197,8 @@ nav div {
 .benefit-1 p {
 	opacity: 0.6;
 	margin-top: 8px;
-	font-size: 15px;
+	font-size: 14.5px;
+	line-height: 19px;
 }
 
 .benefits-2 {
@@ -178,8 +216,9 @@ nav div {
 	margin: 5px 0;
 }
 .benefit-2 ion-icon {
-	font-size: 65px;
+	font-size: 60px;
 	color: #23a6f0;
+	margin-bottom: 10px;
 }
 
 .benefit-2 p {
@@ -419,20 +458,15 @@ input:focus {
 
 .contact-section {
 	position: relative;
+	margin-top: -50px;
 }
-.appointment {
-	/* position: absolute;
-	top: 0; */
-	width: 300px;
-}
-
 .appointment {
 	width: 600px;
 	display: grid;
 	grid-template-columns: 180px 1fr;
 	background: #fff;
 	margin: auto;
-	transform: translateY(-50%);
+	transform: translateY(-40%);
 }
 .appointment .image {
 	background: url(./images/contact.png);
@@ -548,4 +582,79 @@ footer ion-icon {
 	color: #23a6f0;
 	font-size: 20px;
 	margin: 0 10px;
+}
+
+@media screen and (max-width: 1000px) {
+	nav,
+	.benefits-1 {
+		padding: 0 60px;
+	}
+	.benefits-2 {
+		padding: 60px;
+	}
+	.industry-section {
+		padding: 60px;
+	}
+	.companies-section {
+		padding: 30px 60px 50px;
+	}
+	.subscribe-section {
+		margin: 0 60px 30px;
+	}
+	.pricing-section {
+		padding: 40px 60px;
+	}
+	.branches {
+		padding: 60px 60px 350px;
+	}
+	.contact-below {
+		padding: 0 60px 50px;
+	}
+	.links {
+		padding: 40px 60px 30px;
+	}
+	footer {
+		padding: 30px 60px;
+	}
+}
+
+@media screen and (max-width: 890px) {
+	.burger {
+		display: block;
+	}
+	nav .nav-link,
+	.nav-right {
+		display: none;
+	}
+
+	.benefit-1 ion-icon,
+	.benefit-2 ion-icon {
+		font-size: 30px;
+	}
+	.benefit-1 h3 {
+		font-size: 17px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.subscribe-section {
+		flex-direction: column;
+		text-align: center;
+	}
+	.subscribe-section .input-con {
+		width: 90%;
+		margin-top: 20px;
+	}
+	.contact-below {
+		flex-direction: column;
+		text-align: center;
+	}
+	.contact-below button {
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 630px) {
+	.appointment {
+		width: 100%;
+	}
 }
