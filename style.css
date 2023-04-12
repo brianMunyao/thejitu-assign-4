@@ -284,3 +284,99 @@ input:focus {
 	border-radius: 0;
 	cursor: pointer;
 }
+
+.pricing-section {
+	padding: 50px 120px;
+}
+
+.pricing-section h2 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+.pricing-section p.subtitle {
+	margin-bottom: 40px;
+	line-height: 27px;
+	opacity: 0.6;
+	text-align: center;
+	font-size: 15px;
+}
+
+.pricing-levels {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.pricing-con {
+	border: 1.5px solid #23a6f0;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.pricing-con:nth-child(2) {
+	background: #252b42;
+	color: #ffffffd6;
+}
+.pricing-con h3 {
+	font-size: 21px;
+	letter-spacing: 0.8px;
+	text-align: center;
+}
+.pricing-con p {
+	text-align: center;
+	margin: 18px 0;
+	font-size: 14px;
+	line-height: 20px;
+	opacity: 0.7;
+}
+.price-con {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #23a6f0;
+	margin: 25px auto;
+}
+.price-con .price {
+	font-size: 30px;
+	font-weight: 700;
+	margin-right: 10px;
+}
+.price-con .currency {
+	font-weight: 600;
+}
+.price-con .per {
+	font-size: 14px;
+	opacity: 0.6;
+}
+.price-con div {
+	display: flex;
+	flex-direction: column;
+}
+
+.pricing-con .features {
+	padding: 5px 0;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.pricing-con .features i {
+	font-size: 23px;
+	margin-right: 10px;
+}
+
+.pricing-con .features.included i {
+	color: rgb(23, 181, 23);
+}
+.pricing-con .features.not-included i {
+	color: rgb(179, 179, 179);
+}
+
+.pricing-con button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+}
