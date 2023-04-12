@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
 
 *,
 html {
@@ -493,4 +493,52 @@ input:focus {
 
 .contact-below button {
 	padding: 10px 40px;
+}
+
+.links {
+	background: #fff;
+	padding: 40px 120px 30px;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.links .link-con {
+	display: flex;
+	flex-direction: column;
+}
+
+.links .link-con > * {
+	font-size: 14px;
+	height: 35px;
+	margin: auto 0;
+}
+.links .link-con .header {
+	font-weight: 700;
+	letter-spacing: 0.2px;
+}
+.links .link-con .link {
+	color: rgb(103, 103, 103);
+}
+.links .link-con .link i {
+	color: #23a6f0;
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 120px;
+}
+
+footer span {
+	color: rgb(108, 108, 108);
+	font-size: 14px;
+}
+
+footer i {
+	color: #23a6f0;
+	font-size: 20px;
+	margin: 0 10px;
 }
