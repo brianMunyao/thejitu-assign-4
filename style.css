@@ -43,8 +43,13 @@ button,
 	padding: 10px;
 	display: flex;
 	align-items: center;
-	border-radius: 5px;
-	/* cursor: pointer; */
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+button:hover,
+.btn:hover {
+	background: #158ed4;
 }
 a {
 	color: inherit;
@@ -379,4 +384,113 @@ input:focus {
 	justify-content: center;
 	width: 100%;
 	margin-top: 20px;
+}
+
+.branches {
+	padding: 80px 120px 250px;
+	display: grid;
+	gap: 40px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	background: #252b42;
+	color: #fff;
+}
+
+.branches img {
+	width: 70%;
+	margin: auto;
+}
+
+.branches h3 {
+	font-size: 35px;
+	line-height: 45px;
+	margin-bottom: 20px;
+}
+
+.branches p {
+	line-height: 20px;
+	font-size: 15px;
+	opacity: 0.7;
+}
+
+.contact-section {
+	position: relative;
+}
+.appointment {
+	/* position: absolute;
+	top: 0; */
+	width: 300px;
+}
+
+.appointment {
+	width: 600px;
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	background: #fff;
+	margin: auto;
+	transform: translateY(-50%);
+}
+.appointment .image {
+	background: url(./images/contact.png);
+	background-size: cover;
+}
+
+.appointment .form {
+	padding: 30px;
+}
+.appointment h3 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.form-item {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 5px;
+	margin: 15px 0;
+}
+.form-item label {
+	color: rgb(20, 20, 20);
+	font-size: 14px;
+	margin-bottom: 3px;
+}
+.form-item input,
+.form-item select {
+	transition: all 0.2s linear;
+	background: rgb(245, 245, 245);
+	border: 1.5px solid rgb(223, 223, 223);
+	font-size: 15px;
+	padding: 8px 10px;
+	border-radius: 3px;
+}
+.form-item input:focus,
+.form-item select:focus {
+	background: #d7effd;
+	border: 1.5px solid #23a6f0;
+}
+
+.form button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-below {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 120px 50px;
+}
+.contact-below h3 {
+	font-size: 20px;
+}
+.contact-below p {
+	font-size: 14px;
+	opacity: 0.6;
+	margin-top: 10px;
+}
+
+.contact-below button {
+	padding: 10px 40px;
 }
