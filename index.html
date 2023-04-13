@@ -6,8 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>BrandName</title>
 		<link rel="stylesheet" href="./style.css" />
-		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
 	</head>
 	<body>
 		<div class="top">
@@ -35,7 +41,6 @@
 
 			<div class="mobile-nav">
 				<div class="nav-links">
-
 					<a href="#" class="nav-link">Home</a>
 					<a href="#" class="nav-link">Product</a>
 					<a href="#" class="nav-link">Pricing</a>
@@ -53,14 +58,11 @@
 			</div>
 
 			<div class="hero-section">
-				<h1>
-					We Ensure A Best<br />
-					Insurance Service
-				</h1>
+				<h1>We Ensure A Best Insurance Service</h1>
 
 				<p>
-					We know how large objects will act, but things on a<br />
-					small scale jusct do not act that way.
+					We know how large objects will act, but things on a small
+					scale just do not act that way.
 				</p>
 
 				<div class="btns">
@@ -187,7 +189,7 @@
 			</h3>
 
 			<div class="input-con">
-				<input type="text" />
+				<input type="text" placeholder="Your Email" />
 				<button>Subscribe</button>
 			</div>
 		</div>
@@ -343,53 +345,54 @@
 		<div class="contact-section">
 			<div class="appointment">
 				<div class="image"></div>
+				<form action="">
+					<div class="form">
+						<h3>Book appointment</h3>
 
-				<div class="form">
-					<h3>Book appointment</h3>
+						<div class="form-item">
+							<label for="name">Name *</label>
+							<input
+								type="text"
+								name="name"
+								id="name"
+								placeholder="Full Name *"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="email">Email address *</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="example@gmail.com"
+							/>
+						</div>
+						<div class="form-item">
+							<label for="department">Department *</label>
+							<select name="department" id="department">
+								<option value="" selected disabled>
+									Please Select
+								</option>
+								<option value="IT">IT</option>
+								<option value="Sales">Sales</option>
+								<option value="Finance">Finance</option>
+							</select>
+						</div>
+						<div class="form-item">
+							<label for="time">Time *</label>
+							<select name="time" id="time">
+								<option value="" disabled selected>
+									4:00 Available
+								</option>
+								<option value="4:00">4:00</option>
+								<option value="6:00">6:00</option>
+								<option value="10:00">10:00</option>
+							</select>
+						</div>
 
-					<div class="form-item">
-						<label for="name">Name *</label>
-						<input
-							type="text"
-							name="name"
-							id="name"
-							placeholder="Full Name *"
-						/>
+						<button>Book an appointment</button>
 					</div>
-					<div class="form-item">
-						<label for="email">Email address *</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="example@gmail.com"
-						/>
-					</div>
-					<div class="form-item">
-						<label for="department">Department *</label>
-						<select name="department" id="department">
-							<option value="" selected disabled>
-								Please Select
-							</option>
-							<option value="IT">IT</option>
-							<option value="Sales">Sales</option>
-							<option value="Finance">Finance</option>
-						</select>
-					</div>
-					<div class="form-item">
-						<label for="time">Time *</label>
-						<select name="time" id="time">
-							<option value="" disabled selected>
-								4:00 Available
-							</option>
-							<option value="4:00">4:00</option>
-							<option value="6:00">6:00</option>
-							<option value="10:00">10:00</option>
-						</select>
-					</div>
-
-					<button>Book an appointment</button>
-				</div>
+				</form>
 			</div>
 
 			<div class="contact-below">
@@ -434,16 +437,17 @@
 			<div class="link-con">
 				<span class="header">Get In Touch</span>
 				<a href="#" class="link"
-					><ion-icon name="call-outline"></ion-icon> (480)
-					555-0103</span
-				></a>
+					><ion-icon name="call-outline"></ion-icon
+					><span>(480) 555-0103</span></a
+				>
 				<a href="#" class="link"
-					><ion-icon name="location-outline"></ion-icon> 4517 Washington
-					Ave.</span
-				></a>
+					><ion-icon name="location-outline"></ion-icon
+					><span>4517 Washington Ave.</span></a
+				>
 				<a href="#" class="link"
-					><ion-icon name="mail"></ion-icon> debra@example.com</span
-				></a>
+					><ion-icon name="mail"></ion-icon
+					><span>debra@example.com</span></a
+				>
 			</div>
 		</div>
 

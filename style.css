@@ -32,7 +32,6 @@ body {
 	bottom: 0;
 	content: '';
 	background: rgba(0, 0, 0, 0.5);
-	/* pointer-events: none; */
 }
 .top * {
 	position: relative;
@@ -63,7 +62,7 @@ a {
 }
 
 nav {
-	height: 80px;
+	height: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -138,8 +137,10 @@ nav .member {
 	align-items: center;
 	height: 100%;
 	text-align: center;
+	width: 40%;
+	margin: 0 auto;
 }
-.hero-section h1 {
+h1 {
 	font-size: 45px;
 	line-height: 60px;
 }
@@ -169,18 +170,22 @@ nav .member {
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-auto-rows: 210px;
+	grid-auto-rows: 180px;
 	gap: 30px;
 	padding: 0 120px;
 }
 
 .benefit-1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	transition: all 0.1s linear;
 	transform: translateY(-50%);
 	width: 100%;
 	height: 100%;
 	background: white;
-	padding: 30px;
+	padding: 20px 30px;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.03);
 }
 .benefit-1:hover {
 	background: #23a6f0;
@@ -189,14 +194,12 @@ nav .member {
 .benefit-1 ion-icon {
 	font-size: 50px;
 	color: #23a6f0;
-	margin-bottom: 5px;
 }
 .benefit-1:hover ion-icon {
 	color: #fff;
 }
 .benefit-1 p {
 	opacity: 0.6;
-	margin-top: 8px;
 	font-size: 14.5px;
 	line-height: 19px;
 }
@@ -233,11 +236,11 @@ nav .member {
 	padding: 100px 120px;
 }
 .industry-section h2 {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	font-size: 30px;
 }
 .industry-section .subtitle {
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 	line-height: 25px;
 	color: grey;
 }
@@ -245,12 +248,13 @@ nav .member {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-auto-columns: auto;
-	gap: 10px;
+	gap: 40px;
 }
 
 .testimonial {
 	background: white;
 	border: 2px solid rgb(230, 230, 230);
+	border-radius: 4px;
 	padding: 20px;
 	display: flex;
 	height: 350px;
@@ -335,7 +339,7 @@ input:focus {
 }
 
 .pricing-section {
-	padding: 50px 120px;
+	padding: 50px 120px 80px;
 }
 
 .pricing-section h2 {
@@ -361,7 +365,7 @@ input:focus {
 
 .pricing-con {
 	border: 1.5px solid #23a6f0;
-	padding: 30px;
+	padding: 20px 30px;
 	border-radius: 10px;
 	height: 470px;
 	display: flex;
@@ -477,6 +481,7 @@ input:focus {
 .appointment .image {
 	background: url(./images/contact.png);
 	background-size: cover;
+	background-position: center;
 }
 
 .appointment .form {
@@ -526,6 +531,7 @@ input:focus {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 120px 50px;
+	margin-top: -40px;
 }
 .contact-below h3 {
 	font-size: 20px;
@@ -560,6 +566,7 @@ input:focus {
 .links .link-con .header {
 	font-weight: 700;
 	letter-spacing: 0.2px;
+	margin-top: 5px;
 }
 .links .link-con .link {
 	color: rgb(103, 103, 103);
@@ -594,6 +601,9 @@ footer ion-icon {
 	nav,
 	.benefits-1 {
 		padding: 0 60px;
+	}
+	.hero-section {
+		width: 70%;
 	}
 	.benefits-2 {
 		padding: 60px;
@@ -635,14 +645,24 @@ footer ion-icon {
 
 	.benefit-1 ion-icon,
 	.benefit-2 ion-icon {
-		font-size: 30px;
+		font-size: 35px;
 	}
 	.benefit-1 h3 {
 		font-size: 17px;
 	}
+	.branches h3 {
+		text-align: center;
+	}
+
+	.branches p {
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 700px) {
+	.hero-section {
+		width: 90%;
+	}
 	.subscribe-section {
 		flex-direction: column;
 		text-align: center;
@@ -660,7 +680,29 @@ footer ion-icon {
 	}
 }
 @media screen and (max-width: 630px) {
+	h1 {
+		font-size: 40px;
+		line-height: 48px;
+	}
 	.appointment {
 		width: 100%;
+		grid-template-columns: 120px 1fr;
+	}
+	.appointment .form {
+		padding: 30px 15px;
+	}
+}
+@media screen and (max-width: 620px) {
+	.hero-section .btns {
+		flex-direction: column;
+		gap: 15px;
+	}
+	.subscribe-section {
+		padding: 30px 10px;
+	}
+	footer {
+		text-align: center;
+		flex-direction: column;
+		gap: 20px;
 	}
 }
