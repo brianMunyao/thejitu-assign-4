@@ -32,7 +32,7 @@ body {
 	bottom: 0;
 	content: '';
 	background: rgba(0, 0, 0, 0.5);
-	pointer-events: none;
+	/* pointer-events: none; */
 }
 .top * {
 	position: relative;
@@ -355,6 +355,7 @@ input:focus {
 .pricing-levels {
 	display: flex;
 	justify-content: center;
+	align-items: flex-end;
 	flex-wrap: wrap;
 }
 
@@ -362,11 +363,16 @@ input:focus {
 	border: 1.5px solid #23a6f0;
 	padding: 30px;
 	border-radius: 10px;
+	height: 470px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 .pricing-con:nth-child(2) {
 	background: #252b42;
 	color: #ffffffd6;
+	height: 500px;
 }
 .pricing-con h3 {
 	font-size: 21px;
